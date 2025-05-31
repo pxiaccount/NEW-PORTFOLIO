@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  cursor: none;
+}
+
+body {
+  background-color: #d5def7ff;
+  height: 100vh;
+}

@@ -222,6 +222,9 @@ export default function Home() {
               <a href="https://github.com/pxiaccount" target="_blank" rel="noopener noreferrer" className="cursor-none text-white hover:text-gray-300">
                 GitHub
               </a>
+              <a href="https://medium.com/@kengunpai8855" target="_blank" rel="noopener noreferrer" className="cursor-none text-white hover:text-gray-300">
+                Medium
+              </a>
             </div>
             <div className="text-white text-center">
               <div>Website created by Chaowakon Gunpai</div>

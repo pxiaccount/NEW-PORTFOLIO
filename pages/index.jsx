@@ -56,6 +56,18 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [x, y])
 
+  const play_with_me = () => {
+    const meDiv = document.getElementById('me')
+
+    if (x < 1600) {
+      meDiv.style.rotate = '22.5deg'
+    } else {
+      meDiv.style.rotate = '-22.5deg'
+    }
+  }
+
+  console.log(x, y)
+
   return (
     <div
       className={`${athiti.className} transition-opacity page-transition duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'
@@ -103,6 +115,11 @@ export default function Home() {
       <p className={`p-5 m-30 ml-80 w-100 text-white text-6xl font-bold mb-2`} style={{ backgroundColor: menu }}>CHAOWAKON</p>
       <p className={`p-5 m-30 ml-80 w-100 text-white text-6xl font-bold my-5`} style={{ backgroundColor: menu }}>GUNPAI</p>
       <p className={`p-5 ml-80 text-3xl`} style={{ color: menu }}>Hello, I'm a junior developer.<br /> I am always open to learning <br /> new knowledge and techniques!</p>
+      <Image onMouseOver={play_with_me} onMouseLeave={() => {
+        const meDiv = document.getElementById('me')
+
+        meDiv.style.rotate = '0deg'
+      }} src={require('../public/me.png')} width={300} height={300} className='absolute right-50 top-29 transition' id='me' />
       <div className={`p-51 h-[80vw] rounded-t-[10%] mt-50`} style={{ backgroundImage: `linear-gradient(to top left, ${menubg}, #a6b3d3ff)` }} id='activities' onMouseEnter={() => setMouseColor(bg)} onMouseLeave={() => setMouseColor(menubg)}>
         <p className={`text-7xl p-5 text-center`} style={{ color: menubg, backgroundColor: bg }} onMouseEnter={() => setMouseColor(menubg)} onMouseLeave={() => setMouseColor(bg)}>CERTIFICATE</p>
         <Marquee className="my-20">
